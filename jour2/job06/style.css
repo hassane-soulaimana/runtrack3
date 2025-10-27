@@ -1,0 +1,57 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: black;
+    transition: all 0.5s ease;
+}
+
+body.konami-activated {
+    /* Bleu demandé par l'utilisateur : #0062ff (léger dégradé pour profondeur) */
+    background: linear-gradient(135deg, #0062ff 0%, #0051d9 100%);
+    color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: inset 0 0 120px rgba(0,0,0,0.12);
+}
+
+.konami-activated #content {
+    text-align: center;
+}
+
+.konami-activated #content::before {
+    content: "La Plateforme_";
+    font-size: 3em;
+    font-weight: 700;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.45);
+}
+
+.konami-activated #content::after {
+    content: "Bienvenue à La Plateforme_ !";
+    display: block;
+    font-size: 1.25em;
+    margin-top: 18px;
+    color: #ffffff;
+    letter-spacing: 0.6px;
+}
+
+
+#logo-wrap {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: none;
+}
+
+#lp-logo {
+    width: 140px;
+    height: auto;
+    filter: drop-shadow(0 6px 18px rgba(0,0,0,0.35));
+}
+
+body.konami-activated #logo-wrap {
+    display: block;
+}
