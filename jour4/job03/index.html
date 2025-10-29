@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Filtre Pokémon</title>
+</head>
+<body>
+    <h1>Filtre Pokémon</h1>
+    
+    <form id="filtreForm">
+        <div>
+            <label>ID: <input type="text" id="id"></label>
+        </div>
+        <div>
+            <label>Nom: <input type="text" id="nom"></label>
+        </div>
+        <div>
+            <label>Type: 
+                <select id="type">
+                    <option value="">Tous</option>
+                </select>
+            </label>
+        </div>
+        <div>
+            <input type="button" id="filtrer" value="Filtrer">
+        </div>
+    </form>
+    
+    <div id="resultats"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
