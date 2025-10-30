@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #a8e063 0%, #56ab2f 100%);
+    padding: 20px;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #333;
+    font-size: 2rem;
+}
+
+.form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px 30px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Le bouton de soumission occupe toute la largeur sur 2 colonnes */
+.form > button {
+    grid-column: 1 / -1;
+    margin-top: 10px;
+}
+
+/* Sur petits écrans, revenir à une colonne */
+@media (max-width: 768px) {
+    .container {
+        max-width: 500px;
+        padding: 30px;
+    }
+    
+    .form {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .form > button {
+        grid-column: 1;
+    }
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #555;
+    font-size: 0.95rem;
+}
+
+input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+input:focus {
+    outline: none;
+    border-color: #28a745;
+    box-shadow: 0 0 0 3px rgba(40, 167, 69, 0.1);
+}
+
+input.valid {
+    border-color: #28a745;
+    background-color: #f0fff4;
+}
+
+input.invalid {
+    border-color: #dc3545;
+    background-color: #fff5f5;
+}
+
+.error {
+    color: #dc3545;
+    font-size: 13px;
+    margin-top: 6px;
+    min-height: 18px;
+    font-weight: 500;
+}
+
+.btn {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);
+}
+
+.btn:hover {
+    background: linear-gradient(135deg, #218838 0%, #1ba87d 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(40, 167, 69, 0.4);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+.btn:disabled {
+    background: #6c757d;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+.link {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 0.95rem;
+}
+
+.link a {
+    color: #28a745;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.link a:hover {
+    text-decoration: underline;
+    color: #20c997;
+}
