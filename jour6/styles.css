@@ -1,0 +1,23 @@
+
+    body {
+      background-color: #f1f1f1;
+    }
+    .card img {
+      height: 180px;
+      object-fit: cover;
+    }
+    .btn-reboot {
+      background-color: #dc3545;
+      color: white;
+    }
+    .progress {
+      height: 20px;
+    }
+    footer {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background: white;
+      border-top: 1px solid #ddd;
+      padding: 8px 0;
+    }
