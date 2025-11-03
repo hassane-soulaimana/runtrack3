@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Création de compte</title>
+  </head>
+  <body>
+    <header class="header">
+      <h1>Inscription</h1>
+      <nav class="nav">
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="index.html">Inscription</a></li>
+          <li><a href="index.html">Connexion</a></li>
+          <li><a href="index.html">Rechercher</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="section">
+        <form action="#" method="post" id="formInscription" class="form">
+          <fieldset class="civilite">
+            <legend>Civilité</legend>
+            <label><input type="radio" name="civilite" value="monsieur" required> Monsieur</label>
+            <label><input type="radio" name="civilite" value="madame"> Madame</label>
+            <label><input type="radio" name="civilite" value="autre"> Autre</label>
+          </fieldset>
+
+          <fieldset class="infos">
+            <legend>Informations personnelles</legend>
+            <label>Prénom
+              <input type="text" name="prenom" class="prenom" required>
+            </label>
+            <label>Nom
+              <input type="text" name="nom" class="nom" required>
+            </label>
+            <label>Adresse
+              <input type="text" name="adresse" class="adresse">
+            </label>
+          </fieldset>
+
+          <fieldset class="connexion">
+            <legend>Connexion</legend>
+            <label>Email
+              <input type="email" name="email" class="email" required>
+            </label>
+            <label>Mot de passe
+              <input type="password" name="password" class="password" required>
+            </label>
+            <label>Confirmer le mot de passe
+              <input type="password" name="passwordConfirm" class="passwordConfirm" required>
+            </label>
+          </fieldset>
+
+          <fieldset class="passions">
+            <legend>Passions (choix multiples)</legend>
+            <label><input type="checkbox" name="passions[]" value="informatique"> Informatique</label>
+            <label><input type="checkbox" name="passions[]" value="voyages"> Voyages</label>
+            <label><input type="checkbox" name="passions[]" value="sport"> Sport</label>
+            <label><input type="checkbox" name="passions[]" value="lecture"> Lecture</label>
+          </fieldset>
+
+          <button type="submit" class="submit">Valider</button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="index.html">Inscription</a></li>
+        <li><a href="index.html">Connexion</a></li>
+        <li><a href="index.html">Rechercher</a></li>
+      </ul>
+    </footer>
+  </body>
+</html>
