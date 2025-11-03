@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Création de compte</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-50 text-gray-800 min-h-screen">
+    <header
+      class="bg-gradient-to-r from-blue-600 to-indigo-600 text-white shadow"
+    >
+      <div
+        class="max-w-4xl mx-auto px-4 py-4 flex items-center justify-between"
+      >
+        <h1 class="text-2xl font-semibold text-white">#Colors</h1>
+        <nav class="flex items-center gap-2">
+          <a
+            class="text-white hover:bg-white/10 px-3 py-2 rounded"
+            href="index.html"
+            >Accueil</a
+          >
+          <a
+            class="text-white hover:bg-white/10 px-3 py-2 rounded"
+            href="index.html"
+            >Inscription</a
+          >
+          <a
+            class="text-white hover:bg-white/10 px-3 py-2 rounded"
+            href="index.html"
+            >Connexion</a
+          >
+          <a
+            class="text-white hover:bg-white/10 px-3 py-2 rounded"
+            href="index.html"
+            >Rechercher</a
+          >
+        </nav>
+      </div>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-4 py-8">
+      <section class="bg-white shadow-md rounded-lg p-6">
+        <form action="#" method="post" id="formInscription" class="space-y-6">
+          <fieldset class="border border-gray-200 rounded-md p-4">
+            <legend class="px-2 text-sm font-medium">Civilité</legend>
+            <div class="flex gap-6 mt-2">
+              <label class="flex items-center gap-2"
+                ><input
+                  type="radio"
+                  name="civilite"
+                  value="monsieur"
+                  required
+                  class="form-radio"
+                />
+                <span>Monsieur</span></label
+              >
+              <label class="flex items-center gap-2"
+                ><input
+                  type="radio"
+                  name="civilite"
+                  value="madame"
+                  class="form-radio"
+                />
+                <span>Madame</span></label
+              >
+              <label class="flex items-center gap-2"
+                ><input
+                  type="radio"
+                  name="civilite"
+                  value="autre"
+                  class="form-radio"
+                />
+                <span>Autre</span></label
+              >
+            </div>
+          </fieldset>
+
+          <fieldset class="border border-gray-200 rounded-md p-4">
+            <legend class="px-2 text-sm font-medium">
+              Informations personnelles
+            </legend>
+            <div class="grid grid-cols-1 gap-4 mt-2">
+              <label class="block">
+                <span class="text-sm">Prénom</span>
+                <input
+                  class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500"
+                  type="text"
+                  name="prenom"
+                  required
+                />
+              </label>
+              <label class="block">
+                <span class="text-sm">Nom</span>
+                <input
+                  class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500"
+                  type="text"
+                  name="nom"
+                  required
+                />
+              </label>
+              <label class="block">
+                <span class="text-sm">Adresse</span>
+                <input
+                  class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500"
+                  type="text"
+                  name="adresse"
+                />
+              </label>
+            </div>
+          </fieldset>
+
+          <fieldset class="border border-gray-200 rounded-md p-4">
+            <legend class="px-2 text-sm font-medium">Connexion</legend>
+            <div class="grid grid-cols-1 gap-4 mt-2">
+              <label class="block">
+                <span class="text-sm">Email</span>
+                <input
+                  class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500"
+                  type="email"
+                  name="email"
+                  required
+                />
+              </label>
+              <label class="block">
+                <span class="text-sm">Mot de passe</span>
+                <input
+                  class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500"
+                  type="password"
+                  name="password"
+                  required
+                />
+              </label>
+              <label class="block">
+                <span class="text-sm">Confirmer le mot de passe</span>
+                <input
+                  class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500"
+                  type="password"
+                  name="passwordConfirm"
+                  required
+                />
+              </label>
+            </div>
+          </fieldset>
+
+          <fieldset class="border border-gray-200 rounded-md p-4">
+            <legend class="px-2 text-sm font-medium">
+              Passions (choix multiples)
+            </legend>
+            <div class="flex gap-4 flex-wrap mt-2">
+              <label class="inline-flex items-center gap-2"
+                ><input
+                  type="checkbox"
+                  name="passions[]"
+                  value="informatique"
+                  class="form-checkbox"
+                />
+                <span>Informatique</span></label
+              >
+              <label class="inline-flex items-center gap-2"
+                ><input
+                  type="checkbox"
+                  name="passions[]"
+                  value="voyages"
+                  class="form-checkbox"
+                />
+                <span>Voyages</span></label
+              >
+              <label class="inline-flex items-center gap-2"
+                ><input
+                  type="checkbox"
+                  name="passions[]"
+                  value="sport"
+                  class="form-checkbox"
+                />
+                <span>Sport</span></label
+              >
+              <label class="inline-flex items-center gap-2"
+                ><input
+                  type="checkbox"
+                  name="passions[]"
+                  value="lecture"
+                  class="form-checkbox"
+                />
+                <span>Lecture</span></label
+              >
+            </div>
+          </fieldset>
+
+          <div class="flex justify-end">
+            <button
+              type="submit"
+              class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700"
+            >
+              Valider
+            </button>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <footer class="bg-gradient-to-r from-blue-600 to-indigo-600 text-white shadow">
+      <div
+        class="max-w-4xl mx-auto px-4 py-6 flex items-center justify-between"
+      >
+        <p class="text-sm">&copy; 2025 MonSite</p>
+        <ul class="flex gap-3">
+          <li>
+            <a class="hover:bg-white/10 px-3 py-2 rounded" href="index.html"
+              >Accueil</a
+            >
+          </li>
+          <li>
+            <a class="hover:bg-white/10 px-3 py-2 rounded" href="index.html"
+              >Inscription</a
+            >
+          </li>
+          <li>
+            <a class="hover:bg-white/10 px-3 py-2 rounded" href="index.html"
+              >Connexion</a
+            >
+          </li>
+          <li>
+            <a class="hover:bg-white/10 px-3 py-2 rounded" href="index.html"
+              >Rechercher</a
+            >
+          </li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>
