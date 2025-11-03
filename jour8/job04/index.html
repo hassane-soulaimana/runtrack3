@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Création de compte</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-50 text-gray-800 min-h-screen">
+    <header
+      class="bg-gradient-to-r from-blue-600 to-indigo-600 text-white shadow"
+    >
+      <div
+        class="max-w-4xl mx-auto px-4 py-4 flex items-center justify-between"
+      >
+        <h1 class="text-2xl font-semibold text-white">Inscription</h1>
+        <nav class="flex items-center gap-2">
+          <a
+            class="text-white hover:bg-white/10 px-3 py-2 rounded"
+            href="index.html"
+            >Accueil</a
+          >
+          <a
+            class="text-white hover:bg-white/10 px-3 py-2 rounded"
+            href="index.html"
+            >Inscription</a
+          >
+          <a
+            class="text-white hover:bg-white/10 px-3 py-2 rounded"
+            href="index.html"
+            >Connexion</a
+          >
+          <a
+            class="text-white hover:bg-white/10 px-3 py-2 rounded"
+            href="index.html"
+            >Rechercher</a
+          >
+        </nav>
+      </div>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-4 py-8">
+      <section class="bg-white shadow-md rounded-lg p-6">
+        <form action="#" method="post" id="formInscription" class="space-y-6">
+
+          <fieldset class="bg-gray-50/60 border border-gray-200 rounded-xl p-4">
+            <legend class="px-2 text-sm font-medium">Civilité</legend>
+            <div class="flex gap-6 mt-3">
+              <label class="inline-flex items-center gap-2">
+                <input
+                  type="radio"
+                  name="civilite"
+                  value="monsieur"
+                  required
+                  class="form-radio text-blue-600"
+                />
+                <span class="text-sm">Monsieur</span>
+              </label>
+              <label class="inline-flex items-center gap-2">
+                <input
+                  type="radio"
+                  name="civilite"
+                  value="madame"
+                  class="form-radio text-blue-600"
+                />
+                <span class="text-sm">Madame</span>
+              </label>
+              <label class="inline-flex items-center gap-2">
+                <input
+                  type="radio"
+                  name="civilite"
+                  value="autre"
+                  class="form-radio text-blue-600"
+                />
+                <span class="text-sm">Autre</span>
+              </label>
+            </div>
+          </fieldset>
+
+          <!-- informations personnelles -->
+          <fieldset
+            class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm"
+          >
+            <legend class="px-2 text-sm font-medium">
+              Informations personnelles
+            </legend>
+            <div class="grid grid-cols-1 gap-4 mt-4">
+              <div class="relative">
+                <span
+                  class="absolute inset-y-0 left-3 flex items-center text-gray-400"
+                >
+                  <!-- user icon -->
+                  <svg
+                    class="w-5 h-5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5.121 17.804A13.937 13.937 0 0112 15c2.5 0 4.847.57 6.879 1.804M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                    ></path>
+                  </svg>
+                </span>
+                <input
+                  type="text"
+                  name="prenom"
+                  required
+                  placeholder="Prénom"
+                  class="pl-10 pr-4 py-2 w-full rounded-lg border border-gray-200 bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                />
+              </div>
+
+              <div class="relative">
+                <span
+                  class="absolute inset-y-0 left-3 flex items-center text-gray-400"
+                >
+                  <!-- id icon -->
+                  <svg
+                    class="w-5 h-5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14v7"
+                    ></path>
+                  </svg>
+                </span>
+                <input
+                  type="text"
+                  name="nom"
+                  required
+                  placeholder="Nom"
+                  class="pl-10 pr-4 py-2 w-full rounded-lg border border-gray-200 bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                />
+              </div>
+
+              <div class="relative">
+                <span
+                  class="absolute inset-y-0 left-3 flex items-center text-gray-400"
+                >
+                  <svg
+                    class="w-5 h-5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 11c1.657 0 3-1.343 3-3S13.657 5 12 5 9 6.343 9 8s1.343 3 3 3z"
+                    ></path>
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 21s8-4.5 8-10a8 8 0 10-16 0c0 5.5 8 10 8 10z"
+                    ></path>
+                  </svg>
+                </span>
+                <input
+                  type="text"
+                  name="adresse"
+                  placeholder="Adresse"
+                  class="pl-10 pr-4 py-2 w-full rounded-lg border border-gray-200 bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                />
+              </div>
+            </div>
+          </fieldset>
+
+          <!-- connexion -->
+          <fieldset
+            class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm"
+          >
+            <legend class="px-2 text-sm font-medium">Connexion</legend>
+            <div class="grid grid-cols-1 gap-4 mt-4">
+              <div class="relative">
+                <span
+                  class="absolute inset-y-0 left-3 flex items-center text-gray-400"
+              >   <svg
+                    class="w-5 h-5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                    ></path>
+                  </svg>
+                </span>
+                <input
+                  type="email"
+                  name="email"
+                  required
+                  placeholder="Email"
+                  class="pl-10 pr-4 py-2 w-full rounded-lg border border-gray-200 bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                />
+              </div>
+
+              <div class="relative">
+                <span
+                  class="absolute inset-y-0 left-3 flex items-center text-gray-400"
+                >
+                  <!-- lock icon -->
+                  <svg
+                    class="w-5 h-5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <rect
+                      x="3"
+                      y="11"
+                      width="18"
+                      height="11"
+                      rx="2"
+                      ry="2"
+                    ></rect>
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M7 11V7a5 5 0 0110 0v4"
+                    ></path>
+                  </svg>
+                </span>
+                <input
+                  type="password"
+                  name="password"
+                  required
+                  placeholder="Mot de passe"
+                  class="pl-10 pr-4 py-2 w-full rounded-lg border border-gray-200 bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                />
+              </div>
+
+              <div class="relative">
+                <span
+                  class="absolute inset-y-0 left-3 flex items-center text-gray-400"
+                >
+                  <!-- lock icon -->
+                  <svg
+                    class="w-5 h-5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <rect
+                      x="3"
+                      y="11"
+                      width="18"
+                      height="11"
+                      rx="2"
+                      ry="2"
+                    ></rect>
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M7 11V7a5 5 0 0110 0v4"
+                    ></path>
+                  </svg>
+                </span>
+                <input
+                  type="password"
+                  name="passwordConfirm"
+                  required
+                  placeholder="Confirmer le mot de passe"
+                  class="pl-10 pr-4 py-2 w-full rounded-lg border border-gray-200 bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                />
+              </div>
+            </div>
+          </fieldset>
+
+          <!-- passions -->
+          <fieldset class="bg-gray-50/60 border border-gray-200 rounded-xl p-4">
+            <legend class="px-2 text-sm font-medium">
+              Passions (choix multiples)
+            </legend>
+            <div class="flex gap-4 flex-wrap mt-3">
+              <label
+                class="inline-flex items-center gap-2 bg-white px-3 py-2 rounded shadow-sm"
+              >
+                <input
+                  type="checkbox"
+                  name="passions[]"
+                  value="informatique"
+                  class="form-checkbox text-blue-600"
+                />
+                <span class="text-sm">Informatique</span>
+              </label>
+              <label
+                class="inline-flex items-center gap-2 bg-white px-3 py-2 rounded shadow-sm"
+              >
+                <input
+                  type="checkbox"
+                  name="passions[]"
+                  value="voyages"
+                  class="form-checkbox text-blue-600"
+                />
+                <span class="text-sm">Voyages</span>
+              </label>
+              <label
+                class="inline-flex items-center gap-2 bg-white px-3 py-2 rounded shadow-sm"
+              >
+                <input
+                  type="checkbox"
+                  name="passions[]"
+                  value="sport"
+                  class="form-checkbox text-blue-600"
+                />
+                <span class="text-sm">Sport</span>
+              </label>
+              <label
+                class="inline-flex items-center gap-2 bg-white px-3 py-2 rounded shadow-sm"
+              >
+                <input
+                  type="checkbox"
+                  name="passions[]"
+                  value="lecture"
+                  class="form-checkbox text-blue-600"
+                />
+                <span class="text-sm">Lecture</span>
+              </label>
+            </div>
+          </fieldset>
+
+          <div class="flex justify-end">
+            <button
+              type="submit"
+              class="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-6 py-2 rounded-lg shadow hover:scale-[1.01] transition"
+            >
+              Valider
+            </button>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <footer class="bg-gradient-to-r from-blue-600 to-indigo-600 text-white shadow">
+      <div
+        class="max-w-4xl mx-auto px-4 py-6 flex items-center justify-between"
+      >
+        <p class="text-sm">&copy; 2025 MonSite</p>
+        <ul class="flex gap-3">
+          <li>
+            <a class="hover:bg-white/10 px-3 py-2 rounded" href="index.html"
+              >Accueil</a
+            >
+          </li>
+          <li>
+            <a class="hover:bg-white/10 px-3 py-2 rounded" href="index.html"
+              >Inscription</a
+            >
+          </li>
+          <li>
+            <a class="hover:bg-white/10 px-3 py-2 rounded" href="index.html"
+              >Connexion</a
+            >
+          </li>
+          <li>
+            <a class="hover:bg-white/10 px-3 py-2 rounded" href="index.html"
+              >Rechercher</a
+            >
+          </li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>
