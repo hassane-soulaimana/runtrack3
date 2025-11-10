@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>CarFlow</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body class="antialiased bg-gray-100 text-gray-800">
+    <!-- NAVBAR -->
+    <header
+      class="bg-gradient-to-r from-blue-900 to-stone-950 text-white sticky top-0 z-50"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+          <div class="flex-shrink-0 w-48">
+            <a href="#" class="block">
+              <img
+                src="logo.png"
+                alt="logo"
+                class="w-full h-auto object-contain rounded-md bg-white/20 p-2"
+              />
+            </a>
+          </div>
+
+          <nav class="hidden md:flex items-center gap-6">
+            <a class="text-white hover:opacity-90" href="#">Produits</a>
+            <a class="text-white hover:opacity-90" href="#">Solutions</a>
+            <a class="text-white hover:opacity-90" href="#">Tarifs</a>
+            <a class="text-white hover:opacity-90" href="#">Ressources</a>
+          </nav>
+
+          <div class="hidden md:flex items-center gap-3">
+            <button class="text-white hover:opacity-90 p-2">
+              <i class="fas fa-search"></i>
+            </button>
+            <a
+              href="#"
+              class="bg-white text-blue-700 px-4 py-2 rounded-md font-medium hover:opacity-95"
+              >Essayer</a
+            >
+          </div>
+
+          <div class="md:hidden">
+            <button id="btnMobile" class="p-2 text-white">
+              <i class="fas fa-bars"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- mobile menu -->
+      <div id="mobileMenu" class="md:hidden hidden px-4 pb-4">
+        <a class="block py-2 text-white" href="#">Produits</a>
+        <a class="block py-2 text-white" href="#">Solutions</a>
+        <a class="block py-2 text-white" href="#">Tarifs</a>
+        <a class="block py-2 text-white" href="#">Ressources</a>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12">
+      <section class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+        <div class="py-8">
+          <h1 class="text-4xl sm:text-5xl font-extrabold text-gray-900 mb-4">
+            La plateforme de gestion automobile moderne
+          </h1>
+          <p class="text-lg text-gray-600 mb-6">
+            Optimisez vos ventes, vos offres de service et vos locations avec
+            une interface simple — visibilité totale, décisions rapides.
+          </p>
+          <div class="flex flex-wrap gap-3">
+            <a
+              href="#"
+              class="inline-flex items-center px-5 py-3 bg-stone-900 text-white rounded-md shadow hover:bg-blue-700"
+              >Démarrer gratuitement</a
+            >
+            <a
+              href="#"
+              class="inline-flex items-center px-5 py-3 border border-red-600 text-red-600 rounded-md hover:bg-red-50"
+              >Demander une démo</a
+            >
+          </div>
+
+          <div class="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-4">
+            <div class="text-center">
+              <div class="text-2xl font-bold text-blue-600">+120%</div>
+              <div class="text-sm text-gray-500">Conversations converties</div>
+            </div>
+            <div class="text-center">
+              <div class="text-2xl font-bold text-blue-600">24/7</div>
+              <div class="text-sm text-gray-500">Support disponible</div>
+            </div>
+            <div class="text-center">
+              <div class="text-2xl font-bold text-blue-600">98%</div>
+              <div class="text-sm text-gray-500">Satisfaction client</div>
+            </div>
+            <div class="text-center">
+              <div class="text-2xl font-bold text-blue-600">500+</div>
+              <div class="text-sm text-gray-500">Concessions utilisatrices</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex justify-center">
+          <div class="max-w-md w-full">
+            <img
+              src="Sans titre.jpg"
+              alt="car"
+              class="w-full hero-img shadow-xl object-cover"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- CAR CARDS -->
+      <section class="mt-12">
+        <div class="flex items-center justify-between mb-4">
+          <h2 class="text-2xl font-bold">Véhicules en vedette</h2>
+          <div class="hidden md:flex items-center gap-2">
+            <button onclick="scrollCars(-1)" class="p-2 bg-white rounded shadow text-gray-700 hover:scale-105">
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            <button onclick="scrollCars(1)" class="p-2 bg-white rounded shadow text-gray-700 hover:scale-105">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <div id="carCarousel" class="relative">
+          <div class="flex gap-4 overflow-x-auto scroll-smooth py-2 px-2 snap-x snap-mandatory">
+            <!-- Card 1 -->
+            <article class="min-w-[260px] md:min-w-[300px] bg-white rounded-lg shadow-lg snap-start">
+              <img src="https://images.unsplash.com/photo-1609030429269-ca5b7a409310?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y2l0cm9lbiUyMGMzfGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=600" alt="Voiture 1" class="w-full h-40 object-cover rounded-t-lg" />
+              <div class="p-4">
+                <h3 class="font-semibold">Citroën C3 - 2022</h3>
+                <p class="text-sm text-gray-500">Essence • 45 000 km</p>
+                <div class="mt-3 flex items-center justify-between">
+                  <div class="text-lg font-bold">€12,900</div>
+                  <a href="#" class="text-sm text-blue-600 font-medium">Voir</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card 2 -->
+            <article class="min-w-[260px] md:min-w-[300px] bg-white rounded-lg shadow-lg snap-start">
+              <img src="https://images.unsplash.com/photo-1666335009171-3ddc17937d6d?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjJ8fHJlbmF1bHR8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=600" alt="Voiture 2" class="w-full h-40 object-cover rounded-t-lg" />
+              <div class="p-4">
+                <h3 class="font-semibold">Renault Clio - 2021</h3>
+                <p class="text-sm text-gray-500">Diesel • 60 000 km</p>
+                <div class="mt-3 flex items-center justify-between">
+                  <div class="text-lg font-bold">€9,500</div>
+                  <a href="#" class="text-sm text-blue-600 font-medium">Voir</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card 3 -->
+            <article class="min-w-[260px] md:min-w-[300px] bg-white rounded-lg shadow-lg snap-start">
+              <img src="https://images.unsplash.com/photo-1613390833009-17f210e8c969?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cGV1Z2VvdHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=600" alt="Voiture 3" class="w-full h-40 object-cover rounded-t-lg" />
+              <div class="p-4">
+                <h3 class="font-semibold">Peugeot 208 - 2023</h3>
+                <p class="text-sm text-gray-500">Electrique • 10 000 km</p>
+                <div class="mt-3 flex items-center justify-between">
+                  <div class="text-lg font-bold">€18,900</div>
+                  <a href="#" class="text-sm text-blue-600 font-medium">Voir</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card 4 -->
+            <article class="min-w-[260px] md:min-w-[300px] bg-white rounded-lg shadow-lg snap-start">
+              <img src="https://images.unsplash.com/photo-1655285142221-2ecd4a91776f?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTd8fHZvbGtzd2FnZW4lMjBnb2xmfGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=600" alt="Voiture 4" class="w-full h-40 object-cover rounded-t-lg" />
+              <div class="p-4">
+                <h3 class="font-semibold">Volkswagen Golf - 2020</h3>
+                <p class="text-sm text-gray-500">Hybride • 80 000 km</p>
+                <div class="mt-3 flex items-center justify-between">
+                  <div class="text-lg font-bold">€14,200</div>
+                  <a href="#" class="text-sm text-blue-600 font-medium">Voir</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card 5 -->
+            <article class="min-w-[260px] md:min-w-[300px] bg-white rounded-lg shadow-lg snap-start">
+              <img src="https://images.unsplash.com/photo-1734554381974-56e06a32453c?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGJtdyUyMHNlcmllJTIwM3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=600" alt="Voiture 5" class="w-full h-40 object-cover rounded-t-lg" />
+              <div class="p-4">
+                <h3 class="font-semibold">BMW Série 3 - 2019</h3>
+                <p class="text-sm text-gray-500">Essence • 95 000 km</p>
+                <div class="mt-3 flex items-center justify-between">
+                  <div class="text-lg font-bold">€16,800</div>
+                  <a href="#" class="text-sm text-blue-600 font-medium">Voir</a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+
+
+
+
+
+      <!-- FEATURES -->
+      <section class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="p-6 border rounded-lg">
+          <h3 class="font-semibold text-lg mb-2">Gestion des leads</h3>
+          <p class="text-sm text-gray-600">
+            Centralisez vos contacts, suivez les opportunités et augmentez le
+            taux de conversion.
+          </p>
+        </div>
+        <div class="p-6 border rounded-lg">
+          <h3 class="font-semibold text-lg mb-2">Programmes d'entretien</h3>
+          <p class="text-sm text-gray-600">
+            Planifiez et automatisez les rappels d'entretien pour fidéliser vos
+            clients.
+          </p>
+        </div>
+        <div class="p-6 border rounded-lg">
+          <h3 class="font-semibold text-lg mb-2">Reporting & Analytics</h3>
+          <p class="text-sm text-gray-600">
+            Tableaux de bord clairs pour piloter votre activité en temps réel.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="mt-20 bg-blue-900 to-stone-950 border-t">
+      <div
+        class="max-w-9xl mx-auto px-4 sm:px-6 lg:px-8 py-12 grid grid-cols-1 md:grid-cols-3 gap-8"
+      >
+        <div>
+          <img src="logo.png" alt="logo" class="w-20 h-auto mb-3" />
+          <p class="text-sm text-neutral-50">
+            © <span id="year">2025</span> CarFlow. Tous droits réservés.
+          </p>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-3">Produits</h4>
+          <ul class="text-sm text-neutral-50 space-y-2">
+            <li><a href="#">Plateforme</a></li>
+            <li><a href="#">Intégrations</a></li>
+            <li><a href="#">API</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-3">Contact</h4>
+          <p class="text-sm text-neutral-50">contact@CarFlow.io</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+      document.getElementById('btnMobile').addEventListener('click', function(){
+        const m = document.getElementById('mobileMenu');
+        m.classList.toggle('hidden');
+      });
+
+      function scrollCars(dir){
+        const el = document.getElementById('carCarousel').querySelector('div');
+        if(!el) return;
+        const distance = el.clientWidth * 0.7; // scroll by ~70% of visible area
+        el.scrollBy({ left: dir * distance, behavior: 'smooth' });
+      }
+    </script>
+        });
+    </script>
+  </body>
+</html>
