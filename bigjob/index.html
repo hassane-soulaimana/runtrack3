@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>La Plateforme - École d'Informatique</title>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: { sans: ["Inter", "sans-serif"] },
+            colors: {
+              lp: {
+                50: "#eaf1ff",
+                100: "#cddfff",
+                200: "#9dbfff",
+                300: "#6d9fff",
+                400: "#3d7eff",
+                500: "#0057ff",
+                600: "#0045cc",
+                700: "#0033a1",
+                800: "#002675",
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+
+  <body class="bg-gray-100 text-gray-800 min-h-screen flex flex-col">
+
+  <!-- Navbar -->
+  <nav class="fixed top-0 left-0 right-0 bg-blue-700 shadow-lg z-50">
+      <div class="max-w-7xl mx-auto flex items-center justify-between p-4">
+        <a href="index.html" class="flex items-center gap-3">
+          <span class="font-bold text-white text-xl md:text-2xl">La Plateforme</span>
+        </a>
+
+        <button
+          class="md:hidden text-2xl text-white"
+          onclick="document.getElementById('menu').classList.toggle('hidden')"
+        >
+          <i class="fas fa-bars"></i>
+        </button>
+
+        <ul id="menu" class="hidden md:flex gap-8 text-sm font-medium">
+          <li>
+            <a href="index.html" class="text-white hover:text-blue-200"
+              >Accueil</a
+            >
+          </li>
+          <li>
+            <a href="#formations" class="text-white hover:text-blue-200"
+              >Formations</a
+            >
+          </li>
+          <li>
+            <a href="#campus" class="text-white hover:text-blue-200">Campus</a>
+          </li>
+          <li>
+            <a href="#admission" class="text-white hover:text-blue-200"
+              >Admission</a
+            >
+          </li>
+          <li>
+            <a
+              href="inscription.html"
+              class="px-4 py-2 bg-white text-blue-700 rounded-lg hover:bg-gray-100 shadow"
+              >S'inscrire</a
+            >
+          </li>
+          <li>
+            <a
+              href="connexion.html"
+              class="px-4 py-2 border border-white text-white rounded-lg hover:bg-white/10"
+              >Connexion</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+  <main class="flex-grow max-w-7xl mx-auto pt-28 px-4">
+
+      <!-- Hero -->
+      <section
+        class="bg-white p-12 rounded-2xl shadow text-center mb-16 border border-gray-200"
+      >
+          <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+         L’école qui façonne 
+          <span class="text-blue-600">les experts du numérique de demain.</span>
+        </h1>
+        <p class="text-gray-600 text-lg max-w-2xl mx-auto mb-8">
+          Formez-vous aux métiers du numérique avec une pédagogie innovante.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="inscription.html"
+            class="px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 shadow-md"
+          >
+            Postuler maintenant
+          </a>
+          <a
+            href="#formations"
+            class="px-6 py-3 border border-blue-500 text-blue-600 rounded-lg hover:bg-blue-50"
+          >
+            Découvrir nos formations
+          </a>
+        </div>
+      </section>
+
+      <!-- Formations -->
+      <section id="formations" class="mb-16">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">Nos Formations</h2>
+          <p class="text-gray-600 max-w-2xl mx-auto">
+            Des parcours adaptés à tous les niveaux, du débutant au professionnel.
+          </p>
+        </div>
+
+      <!-- Campus -->
+      <section
+        id="campus"
+        class="mb-16 grid grid-cols-1 md:grid-cols-2 gap-10 items-center"
+      >
+        <!-- Texte -->
+        <div>
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">Notre Campus</h2>
+          <p class="text-gray-600 mb-6">
+            Situé au cœur de Paris, notre campus moderne offre un
+            environnement idéal pour apprendre, créer et collaborer.
+          </p>
+
+          <div class="grid grid-cols-2 gap-4 text-gray-700">
+            <div class="flex items-center">
+              <i class="fas fa-wifi text-blue-500 mr-3"></i> Wi-Fi très haut débit
+            </div>
+            <div class="flex items-center">
+              <i class="fas fa-desktop text-blue-500 mr-3"></i> Matériel dernière
+              génération
+            </div>
+            <div class="flex items-center">
+              <i class="fas fa-utensils text-blue-500 mr-3"></i> Espace détente &
+              restauration
+            </div>
+            <div class="flex items-center">
+              <i class="fas fa-bus text-blue-500 mr-3"></i> Accès transport facile
+            </div>
+          </div>
+        </div>
+
+        <!-- Images -->
+        <div class="grid grid-cols-2 gap-4">
+          <img
+            class="rounded-xl shadow object-cover w-full h-48"
+            src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&w=500"
+          />
+          <img
+            class="rounded-xl shadow object-cover w-full h-48"
+            src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&w=500"
+          />
+          <img
+            class="rounded-xl shadow object-cover w-full h-48"
+            src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&w=500"
+          />
+          <img
+            class="rounded-xl shadow object-cover w-full h-48"
+            src="https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&w=500"
+          />
+        </div>
+      </section>
+
+      <!-- Admissions -->
+      <section
+        id="admission"
+        class="bg-blue-600 p-12 rounded-2xl text-white text-center mb-16 shadow"
+      >
+        <h2 class="text-3xl font-bold mb-4">
+          Prêt à rejoindre La Plateforme ?
+        </h2>
+        <p class="text-white/90 mb-8 text-lg">
+          Postulez dès maintenant pour la prochaine session.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="inscription.html"
+            class="px-6 py-3 bg-white text-blue-700 rounded-lg hover:bg-gray-100 shadow-md"
+          >
+            Candidater en ligne
+          </a>
+          <a
+            href="#"
+            class="px-6 py-3 border border-white rounded-lg hover:bg-white/10"
+          >
+            Réserver une visite
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white mt-12">
+      <div class="max-w-7xl mx-auto py-6 px-4 flex flex-col md:flex-row items-center justify-between">
+        <nav class="mb-3 md:mb-0">
+          <a href="index.html" class="text-gray-300 hover:text-white mr-4">Accueil</a>
+          <a href="#formations" class="text-gray-300 hover:text-white mr-4">Formations</a>
+          <a href="#campus" class="text-gray-300 hover:text-white mr-4">Campus</a>
+          <a href="#admission" class="text-gray-300 hover:text-white mr-4">Admission</a>
+          <a href="inscription.html" class="text-gray-300 hover:text-white mr-4">S'inscrire</a>
+          <a href="connexion.html" class="text-gray-300 hover:text-white">Connexion</a>
+        </nav>
+
+        <div class="text-gray-400 text-sm"> 8 Terr. Bellini, 92800 Puteaux</div>
+      </div>
+      <div class="text-center text-gray-500 text-xs py-3">© <span id="year">2025</span> La Plateforme</div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
