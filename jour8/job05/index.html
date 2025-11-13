@@ -12,7 +12,8 @@
     <link rel="stylesheet" href="styles.css">
   </head>
   <body class="antialiased bg-gray-100 text-gray-800">
-    <!-- NAVBAR -->
+    
+    <!-- Navbar -->
     <header
       class="bg-gradient-to-r from-blue-900 to-stone-950 text-white sticky top-0 z-50"
     >
@@ -117,7 +118,7 @@
         </div>
       </section>
 
-      <!-- CAR CARDS -->
+      <!-- Card Voitures-->
       <section class="mt-12">
         <div class="flex items-center justify-between mb-4">
           <h2 class="text-2xl font-bold">Véhicules en vedette</h2>
@@ -202,11 +203,7 @@
       </section>
 
 
-
-
-
-
-      <!-- FEATURES -->
+      <!-- Description -->
       <section class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6">
         <div class="p-6 border rounded-lg">
           <h3 class="font-semibold text-lg mb-2">Gestion des leads</h3>
@@ -231,7 +228,7 @@
       </section>
     </main>
 
-    <!-- FOOTER -->
+    <!-- Footer -->
     <footer class="mt-20 bg-blue-900 to-stone-950 border-t">
       <div
         class="max-w-9xl mx-auto px-4 sm:px-6 lg:px-8 py-12 grid grid-cols-1 md:grid-cols-3 gap-8"
@@ -267,11 +264,10 @@
       function scrollCars(dir){
         const el = document.getElementById('carCarousel').querySelector('div');
         if(!el) return;
-        const distance = el.clientWidth * 0.7; // scroll by ~70% of visible area
+        const distance = el.clientWidth * 0.7;
         el.scrollBy({ left: dir * distance, behavior: 'smooth' });
       }
     </script>
-        });
-    </script>
+    
   </body>
 </html>
