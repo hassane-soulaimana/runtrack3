@@ -6,20 +6,25 @@
     <title>Connexion — La Plateforme</title>
 
     <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              lp: {
-                50: "#eaf1ff",
-                100: "#cddfff",
-                200: "#9dbfff",
-                300: "#6d9fff",
-                400: "#3d7eff",
-                500: "#0057ff",
-                600: "#0045cc",
-                700: "#0033a1",
-                800: "#002675",
+      // Configure the Tailwind CDN before it loads by setting the global
+      // `window.tailwind` object. Using `tailwind.config =` can throw a
+      // ReferenceError because `tailwind` is not defined yet.
+      window.tailwind = {
+        config: {
+          theme: {
+            extend: {
+              colors: {
+                lp: {
+                  50: "#eaf1ff",
+                  100: "#cddfff",
+                  200: "#9dbfff",
+                  300: "#6d9fff",
+                  400: "#3d7eff",
+                  500: "#0057ff",
+                  600: "#0045cc",
+                  700: "#0033a1",
+                  800: "#002675",
+                },
               },
             },
           },
@@ -96,9 +101,8 @@
             <p class="text-gray-600 mt-2">Accédez à votre espace personnel</p>
           </div>
 
-          <!-- Alerte -->
           <div
-            id="alertLogin"
+            id="alertlogin"
             class="hidden mb-4 p-4 rounded-lg bg-red-50 border border-red-200"
           >
             <div class="flex items-center">
@@ -107,7 +111,7 @@
             </div>
           </div>
 
-          <form id="formConnexion">
+          <form id="login">
             <div class="mb-6">
               <label class="block text-gray-700 text-sm font-medium mb-2"
                 >Email</label
@@ -156,7 +160,6 @@
           </form>
         </div>
 
-        <!-- Info -->
         <div class="mt-8 text-center text-gray-600 text-sm">
           <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
             <div class="flex items-center justify-center">
@@ -175,7 +178,6 @@
       </div>
     </main>
 
-    <!-- Footer-->
     <footer class="bg-gray-900 text-white mt-8">
       <div
         class="max-w-7xl mx-auto py-6 px-4 flex flex-col md:flex-row items-center justify-between"
@@ -211,6 +213,7 @@
     <script>
       document.getElementById("year").textContent = new Date().getFullYear();
     </script>
+    <script src="js/app.js"></script>
     <script src="js/auth.js"></script>
   </body>
 </html>
